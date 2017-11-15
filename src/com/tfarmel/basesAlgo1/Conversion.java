@@ -19,6 +19,8 @@ public class Conversion {
 		temperatureCF(es.lireDouble());
 		System.out.print("Veuillez saisir une température en °F : ");
 		temperatureFC(es.lireDouble());		
+		versHMS(19693);
+		versSec(5,35,45);
 	}
 	
 	/**
@@ -44,15 +46,21 @@ public class Conversion {
 	/**
 	 * Convertit un temps t (en seconde) en heures, minutes et secondes
 	 */
-	public void versHMS(){
-		
+	public static void versHMS(double inSec){
+		int heure, minutes, outSeconde;
+		double tmp;
+		heure = new Double(inSec / 3600).intValue();
+		tmp = ((inSec / 3600)%1)*60;
+		minutes = new Double(tmp).intValue();
+		outSeconde = new Double((tmp%1)*60).intValue();
+		System.out.println(heure + " H " + minutes + " min " + outSeconde + " seconde");
 	}
 	
 	/**
-	 * Convertit des heures, minutes et secondes (3 parametres) en un temps en secondes
+	 * Convertit des heures, minutes et secondes (3 parametres) en un temps en secondes.
 	 */
-	public void versSec(){
-		
+	public static void versSec(int h, int min, int sec){
+		System.out.println((h * 3600 + min * 60 + sec) + " secondes");
 	}
 
 }
