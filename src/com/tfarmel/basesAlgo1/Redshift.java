@@ -11,10 +11,10 @@ public class Redshift {
 	
 	public static void interpreter(double z){
 		double v; // vitesse de fuite apparente de la galaxie.
-		double d; // 
+		double d; // distance apparente
 		v = ((Math.pow(z+1, 2) - 1) / (Math.pow(z+1, 2) + 1)) * C; 
 		d = v * Math.pow(10, 6) * 3.26 / H;
-		System.out.println("Pour z = "+ z + " on a : \n\t v = " + v + " \n\t d = " + d);
+		System.out.println("Pour z = "+ z + " on a : \n\t v = " + v + " km/s \n\t d = " + d + " années-lumière");
 	}
 
 }
